@@ -44,7 +44,7 @@ public class main41 {
         return data;
     }
 
-    static void Write_File() throws IOException {
+    static String[] Write_File() throws IOException {
         // Create an output file
         String[] data = Alphabetize();
         int line_num = Lines_in_Input();
@@ -59,6 +59,8 @@ public class main41 {
 
         // Close output file
         output.close();
+
+        return data;
     }
 
     public static void main(String[] args) throws IOException {
