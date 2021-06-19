@@ -1,22 +1,22 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Rey Fundora
+ */
+
 package ex41;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.LineNumberReader;
+import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class main41 {
     static String[] Read_File() throws IOException {
         // Create an input file
-        File text = new File("exercise41_input.txt");
-        Scanner file_read = new Scanner(text);
+        File input = new File("exercise41_input.txt");
+        Scanner file_read = new Scanner(input);
 
-        // Get number of lines in file
-        int line_num = 0;
-        LineNumberReader line_r = new LineNumberReader(new FileReader(text));
-        while (line_r.readLine() != null)
-            line_num = line_r.getLineNumber();
+        // Learn how many names are in the text file
+        int line_num = Lines_in_Input();
 
         // Read the file and save to String array
         String[] data = new String[line_num];
@@ -26,23 +26,43 @@ public class main41 {
         return data;
     }
 
-    static void Alphabetize() throws IOException {
-        String[] data = Read_File();
-        System.out.println(data[4]);
+    static int Lines_in_Input() throws IOException {
+        // Check number of lines in file
+        int line_num = 0;
+        LineNumberReader line_r = new LineNumberReader(new FileReader("exercise41_input.txt"));
+        while (line_r.readLine() != null)
+            line_num = line_r.getLineNumber();
 
-
-
+        return line_num;
     }
 
-    static void Write_File() {
+    static String[] Alphabetize() throws IOException {
+        // Organize String array alphabetically
+        String[] data = Read_File();
+        Arrays.sort(data);
+
+        return data;
+    }
+
+    static void Write_File() throws IOException {
+        // Create an output file
+        String[] data = Alphabetize();
+        int line_num = Lines_in_Input();
+
+        FileWriter output = new FileWriter("exercise41_output.txt");
+
+        // Write String array data onto output file
+        output.write("Total of " + line_num + " names\n-----------------\n");
+
+        for (int i = 0; i < line_num; i++)
+        output.write(data[i] + "\n");
+
+        // Close output file
+        output.close();
     }
 
     public static void main(String[] args) throws IOException {
-        Alphabetize();
         Write_File();
     }
 }
 
-// Organize String array alphabetically
-// Create an output file
-// Write String array data onto output file
