@@ -8,7 +8,7 @@ import static ex43.main43.user;
 
 public class Generator {
 
-    static void directory() throws IOException {
+    static String directory() throws IOException {
         // Generate "website" directory
         File dir = new File("C:\\Users\\Rey\\Computer Science\\IntelliJ Projects\\" +
                                      "fundora-cop3330-assignment3\\website");
@@ -43,6 +43,7 @@ public class Generator {
             if (css.mkdir()) System.out.println("Created ./" + dir.getName() + "/" + user[0] + "/css/");
             else System.out.println("Directory for css files already exists.");
         }
+
+        return dir.getName() + " " + index.getName();
     }
 }
-
