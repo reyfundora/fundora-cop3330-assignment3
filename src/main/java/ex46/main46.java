@@ -91,6 +91,7 @@ public class main46 {
         String[][] output = Big_to_Small();
         int rows_num = output.length;
 
+        // Print out word chart
         for (int i = 0; i < rows_num; i++) {
             System.out.printf("%-11s %-11s\n", output[i][0], output[i][1]);
         }
