@@ -67,4 +67,3 @@ public class main41 {
         Write_File();
     }
 }
-

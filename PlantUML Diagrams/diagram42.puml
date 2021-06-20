@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class main42 {
++Read_File
+new BufferedReader "Exercise42_input.txt
+int line_num
+
+=for
+String[] data
+
+return data;
+--
++Lines_in_Input
+int line_num = 0
+new LineNumberReader
+
+=while
+readLine
+
+return line_num
+--
++Main
+Output.Print
+}
+
+class output {
++Sorting
+String[] data
+int line_num
+
+=for
+Sorting[][] data_sort = split regex
+  info[i][0] = data_sort[0];
+  info[i][1] = data_sort[1];
+  info[i][2] = data_sort[2];
+
+  return info;
+--
++Print
+String[][] info
+
+println
+println
+=for
+printf
+}
+
+main42 o--> output
+@enduml

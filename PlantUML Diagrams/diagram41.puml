@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Read_file {
+Reads the input file and saves it to
+a String array.
+==
+input = new File ("exercise41_input.txt")
+file_read = new Scanner(input)
+--
+String[] data
+=for loop
+return data;
+}
+
+class Lines_in_Input {
+Function that returns how many
+lines in file for use in loops.
+==
+int line_num
+LineNumberReader line_r
+=while loop
+return line_num
+}
+
+class Alphabetize {
+Organizes String array alphabetically.
+==
+Arrays.sort(data);
+return data;
+}
+
+class Write_File {
+Creates an output file and writes to it
+==
+FileWriter output = "exercise41_output.txt"
+output.write = "Total of 7 names"
+=for loop
+output.close
+}
+
+class Main {
+Write_File();
+}
+
+Read_file o--> Lines_in_Input
+Read_file o--> Alphabetize
+Alphabetize o--> Write_File
+Write_File o--> Lines_in_Input
+Write_File o--> Main
+
+@enduml

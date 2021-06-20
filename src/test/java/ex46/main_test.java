@@ -1,13 +1,9 @@
 package ex46;
 
-import ex45.main45;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import static ex46.main46.*;
+import static ex46.Sorting.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class main_test {
