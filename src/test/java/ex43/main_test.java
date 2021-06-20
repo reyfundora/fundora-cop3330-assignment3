@@ -1,9 +1,11 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Rey Fundora
+ */
+
 package ex43;
 
-import ex42.main42;
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ex43.main43.user;
 

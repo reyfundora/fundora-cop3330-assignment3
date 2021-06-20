@@ -21,6 +21,7 @@ public class Generator {
                                                       "/" + index.getName());
         else System.out.println("HTML file with that name already exists.");
 
+
         // Write to HTML file and create <title> and <meta> tags
         FileWriter tags = new FileWriter(index);
         tags.write("<head>\n" +
