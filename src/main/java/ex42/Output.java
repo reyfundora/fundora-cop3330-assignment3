@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Rey Fundora
+ */
+
 package ex42;
 
 import java.io.IOException;
@@ -29,6 +34,7 @@ public class Output {
     static void Print() throws IOException {
         String[][] info = Sorting();
 
+        // Print array using a for loop.
         System.out.println(info[0][0] + "\t\t" + info [0][1] + "\t\t" + info[0][2]);
         System.out.println("------------------------------");
         for(int i = 1; i < main42.Lines_in_Input() + 1; i++){
