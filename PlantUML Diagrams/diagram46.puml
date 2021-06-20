@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class main46 {
++Print
+String[][] output;
+int rows_num = output.length;
+
+=for
+printf;
+--
++Main
+Print();
+}
+class Sorting {
++Sorting
+new BufferedReader("exercise46_input.txt")
+
+List<String> words_in;
+List<String> words;
+String lines;
+
+=while
+readLine();
+words_in = split regex
+int size = words_in.size();
+=for
+words.add(words_in.get(i));
+
+return words;
+--
++Count
+List<String> words
+List<String> unique
+
+int word_count, unique_count, frequency_count;
+
+Integer[] frequency_count
+=for i
+//frequency manipulation
+=for j
+if (unique.get(i).equals(words.get(j)))
+
+String[][] output;
+String star = "*";
+
+=for
+output[i][0] = unique.get(i) + ": ";
+
+=for i
+output[i][1] = "";
+=for j
+output[i][1] += star;
+
+return output;
+--
++Big_To_Small
+String[][] output;
+
+Arrays.sort(output, new Comparator<String[]>())
+
+return output;
+}
+
+main46 o--> Sorting
+Sorting o--> main46
+
+@enduml

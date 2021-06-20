@@ -1,5 +1,42 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
+class main43 {
++ user_input
+Scanner input
 
+System.out.print:
+Site Name
+Author
+Javascript (Y/N)
+CSS (Y/N)
+
+--
++ main
+user_input()
+Generator.directory();
+}
+
+class Generator {
++directory
+new File "C:\\Website\\"
+dir.mkdir
+
+new File "C:\\index.html\\")
+index.CreateNewFile()
+--
+FileWriter tags = new FileWriter
+tags.write()
+tags.close()
+--
+if Javascript = y
+new File "C:\\js"
+
+if CSS = y
+new File "C:\\css"
+
+return String;
+}
+
+main43 o--> Generator
 @enduml

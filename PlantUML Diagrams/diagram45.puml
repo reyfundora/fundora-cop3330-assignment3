@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class main45 {
++user_input
+new Scanner
+print (name of output file)
+
+return String;
+--
++replace
+File input = new File("exercise45_input.txt")
+new Scanner
+
+int line_num;
+
+StringBuilder text
+=for
+text.append
+
+return text_str.replaceAll regex
+--
++output
+String name, out;
+
+FileWriter output = new FileWriter;
+output.write
+output.close
+--
++Lines_in_output
+--
++main
+output();
+}
+@enduml
