@@ -5,22 +5,32 @@
 
 package ex44;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import static ex44.Product.*;
 import java.io.*;
+import java.util.Scanner;
 
 public class main44 {
+    static boolean user_input() {
+        Scanner input = new Scanner(System.in);
+        int count = name.size();
+
+        // Print that loops until product is found
+        while(true) {
+            System.out.print("What is the product name? ");
+            String user = input.nextLine();
+            for (int i = 0; i < count; i++) {
+                if (user.equals(name.get(i))) {
+                    System.out.printf("Name: %s \nPrice: %.2f \nQuantity: %d",
+                                      name.get(i), price.get(i), quantity.get(i));
+                return false;
+                }
+            }
+            System.out.print("Sorry, that product was not found in our inventory.\n");
+        }
+    }
+
     public static void main (String[] args) throws IOException {
-        File input = new File("exercise44_input.json");
-        JsonElement fileElement = JsonParser.parseReader(new FileReader(input));
-        JsonObject fileObject = fileElement.getAsJsonObject();
-
-        // Pull the basic fields
-        String name = fileObject.get("name").getAsString();
-        Double price = fileObject.get("price").getAsDouble();
-        System.out.println("Name: " + name);
-        System.out.println("Cost: " + price);
-
+        Product.File_Parser();
+        user_input();
     }
 }
