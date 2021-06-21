@@ -5,5 +5,7 @@
 
 package ex44;
 
-public class main_test {
+public class test {
+    String name;
+    String
 }
