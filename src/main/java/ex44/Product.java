@@ -32,7 +32,7 @@ public class Product {
 
             // Extract data
             String name_in = product_object.get("name").getAsString();
-            double price_in = product_object.get("price").getAsInt();
+            double price_in = product_object.get("price").getAsDouble();
             int quantity_in = product_object.get("quantity").getAsInt();
 
             name.add(name_in);

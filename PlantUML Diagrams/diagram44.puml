@@ -1,11 +1,51 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-autonumber
+class main44 {
++ user_input
+new Scanner
+int count = name.size();
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+=while
+print("Product name?")
+String user;
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+=for
+if (user = name)
+print("Name: Price: Quantity:")
+return false;
+
+print("Sorry not found.")
+restart while loop
+--
++ main
+Product.File_Parser();
+user_input();
+}
+
+class Product {
+static List<String> name;
+static List<Double> price;
+static List<Integer> quantity;
+==
++File_Parser
+new File("exercise44_input.json")
+
+JsonArray products = fileObject.get
+=for
+(JsonElement product_element : products)
+JsonObject product_Object = product_element
+
+String name_in = product_Object.getAsString
+String price_in = product_Object.getAsDouble
+String quantity_in = product_Object.getAsString
+
+name.add(name_in);
+price.add(price_in);
+quantity.add(quantity_in);
+}
+
+main44 o--> Product
+Product o-->  main44
+
 @enduml
